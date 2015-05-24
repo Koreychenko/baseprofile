@@ -1,12 +1,10 @@
-name = Standard
+name = Smg Install Profile
 description = Install with commonly used features pre-configured.
-version = VERSION
 core = 7.x
+
 dependencies[] = block
-dependencies[] = color
 dependencies[] = comment
 dependencies[] = contextual
-dependencies[] = dashboard
 dependencies[] = help
 dependencies[] = image
 dependencies[] = list
@@ -16,16 +14,32 @@ dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
 dependencies[] = shortcut
-dependencies[] = toolbar
-dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = rdf
-
-; Information added by Drupal.org packaging script on 2015-05-07
-version = "7.37"
-project = "drupal"
-datestamp = "1430973154"
-
+dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
+dependencies[] = bean_admin_ui
+dependencies[] = bean_panels
+dependencies[] = bundle_copy
+dependencies[] = captcha
+dependencies[] = devel
+dependencies[] = email_registration
+dependencies[] = entity_view_mode
+dependencies[] = features
+dependencies[] = field_group
+dependencies[] = htmlmail
+dependencies[] = imce_wysiwyg
+dependencies[] = l10n_update
+dependencies[] = media
+dependencies[] = module_filter
+dependencies[] = node_clone
+dependencies[] = panelizer
+dependencies[] = panels
+dependencies[] = panels_ipe
+dependencies[] = globalredirect
+dependencies[] = simplemeta
+dependencies[] = taxonomy_menu
+dependencies[] = transliteration
+dependencies[] = views_ui
+dependencies[] = wysiwyg_template

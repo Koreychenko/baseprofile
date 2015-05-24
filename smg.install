@@ -11,7 +11,7 @@
  *
  * @see system_install()
  */
-function standard_install() {
+function smg_install() {
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
@@ -83,26 +83,6 @@ function standard_install() {
       'cache' => -1,
     ),
     array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => -1,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'node',
-      'delta' => 'recent',
-      'theme' => $admin_theme,
-      'status' => 1,
-      'weight' => 10,
-      'region' => 'dashboard_main',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
       'module' => 'user',
       'delta' => 'login',
       'theme' => $default_theme,
@@ -119,16 +99,6 @@ function standard_install() {
       'status' => 1,
       'weight' => 0,
       'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'powered-by',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 10,
-      'region' => 'footer',
       'pages' => '',
       'cache' => -1,
     ),
@@ -182,16 +152,6 @@ function standard_install() {
       'pages' => '',
       'cache' => -1,
     ),
-    array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $admin_theme,
-      'status' => 1,
-      'weight' => -10,
-      'region' => 'dashboard_sidebar',
-      'pages' => '',
-      'cache' => -1,
-    ),
   );
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
   foreach ($blocks as $block) {
@@ -221,40 +181,30 @@ function standard_install() {
       'modified' => 1,
       'locked' => 0,
     ),
+    array(
+      'type' => 'news',
+      'name' => st('News'),
+      'base' => 'node_content',
+      'description' => st('Use <em>news</em> for short texts with dates.'),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+    array(
+      'type' => 'product',
+      'name' => st('Product'),
+      'base' => 'node_content',
+      'description' => st('Use <em>product</em> for content with prices.'),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
   );
 
   foreach ($types as $type) {
     $type = node_type_set_defaults($type);
     node_type_save($type);
     node_add_body_field($type);
-  }
-
-  // Insert default pre-defined RDF mapping into the database.
-  $rdf_mappings = array(
-    array(
-      'type' => 'node',
-      'bundle' => 'page',
-      'mapping' => array(
-        'rdftype' => array('foaf:Document'),
-      ),
-    ),
-    array(
-      'type' => 'node',
-      'bundle' => 'article',
-      'mapping' => array(
-        'field_image' => array(
-          'predicates' => array('og:image', 'rdfs:seeAlso'),
-          'type' => 'rel',
-        ),
-        'field_tags' => array(
-          'predicates' => array('dc:subject'),
-          'type' => 'rel',
-        ),
-      ),
-    ),
-  );
-  foreach ($rdf_mappings as $rdf_mapping) {
-    rdf_mapping_save($rdf_mapping);
   }
 
   // Default "Basic page" to not be promoted and have comments disabled.
@@ -273,55 +223,26 @@ function standard_install() {
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
-  // Create a default vocabulary named "Tags", enabled for the 'article' content type.
-  $description = st('Use tags to group articles on similar topics into categories.');
-  $vocabulary = (object) array(
-    'name' => st('Tags'),
-    'description' => $description,
-    'machine_name' => 'tags',
-  );
-  taxonomy_vocabulary_save($vocabulary);
+  // Create a vocabularies
 
-  $field = array(
-    'field_name' => 'field_' . $vocabulary->machine_name,
-    'type' => 'taxonomy_term_reference',
-    // Set cardinality to unlimited for tagging.
-    'cardinality' => FIELD_CARDINALITY_UNLIMITED,
-    'settings' => array(
-      'allowed_values' => array(
-        array(
-          'vocabulary' => $vocabulary->machine_name,
-          'parent' => 0,
-        ),
+  $vocabularies = array(
+    array(
+      'name' => st('Tags'),
+      'description' => st('Use tags to group articles on similar topics into categories.'),
+      'machine_name' => 'tags',
       ),
-    ),
-  );
-  field_create_field($field);
+    array(
+      'name' => st('Category'),
+      'description' => st('Use category for multilevel hierarchy of content.'),
+      'machine_name' => 'category',
+      ),
+    );
 
-  $help = st('Enter a comma-separated list of words to describe your content.');
-  $instance = array(
-    'field_name' => 'field_' . $vocabulary->machine_name,
-    'entity_type' => 'node',
-    'label' => 'Tags',
-    'bundle' => 'article',
-    'description' => $help,
-    'widget' => array(
-      'type' => 'taxonomy_autocomplete',
-      'weight' => -4,
-    ),
-    'display' => array(
-      'default' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-    ),
-  );
-  field_create_instance($instance);
 
+  foreach ($vocabularies as $vocabulary) {
+    $vocabulary = (object) $vocabulary;
+    taxonomy_vocabulary_save($vocabulary);
+  }
 
   // Create an image field named "Image", enabled for the 'article' content type.
   // Many of the following values will be defaulted, they're included here as an illustrative examples.
@@ -347,6 +268,8 @@ function standard_install() {
 
   // Many of the following values will be defaulted, they're included here as an illustrative examples.
   // See http://api.drupal.org/api/function/field_create_instance/7
+
+
   $instance = array(
     'field_name' => 'field_image',
     'entity_type' => 'node',
