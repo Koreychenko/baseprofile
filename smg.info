@@ -43,3 +43,4 @@ dependencies[] = views_ui
 dependencies[] = wysiwyg_template
 dependencies[] = bean
 dependencies[] = bean_ui
+dependencies[] = webform
