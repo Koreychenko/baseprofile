@@ -44,3 +44,5 @@ dependencies[] = wysiwyg_template
 dependencies[] = bean
 dependencies[] = bean_ui
 dependencies[] = webform
+dependencies[] = panels_bootstrap_layouts
+dependencies[] = entityreference
