@@ -67,4 +67,7 @@ dependencies[] = owl_carousel_views
 dependencies[] = owl_carousel_fields
 dependencies[] = sasta_base
 dependencies[] = fe_nodequeue
+dependencies[] = facetapi
+dependencies[] = search_api
+dependencies[] = search_api_db
 
