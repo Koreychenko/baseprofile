@@ -66,4 +66,5 @@ dependencies[] = owl_carousel_ui
 dependencies[] = owl_carousel_views
 dependencies[] = owl_carousel_fields
 dependencies[] = sasta_base
+dependencies[] = fe_nodequeue
 
