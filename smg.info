@@ -2,72 +2,120 @@ name = Smg Install Profile
 description = Install with commonly used features pre-configured.
 core = 7.x
 
+
+dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
 dependencies[] = block
+dependencies[] = bundle_copy
+dependencies[] = callbackform
+dependencies[] = captcha
+dependencies[] = ckeditor
+dependencies[] = ckeditor_link
+dependencies[] = colorbox
 dependencies[] = comment
+dependencies[] = conditional_fields
 dependencies[] = contextual
+dependencies[] = ctools_custom_content
+dependencies[] = dblog
+dependencies[] = sasta_panelst
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = date
+dependencies[] = date_popup
+dependencies[] = date_views
+dependencies[] = devel
+dependencies[] = devel_generate
+dependencies[] = email_registration
+dependencies[] = entityreference
+dependencies[] = entity_view_mode
+dependencies[] = facetapi
+dependencies[] = fe_nodequeue
+dependencies[] = field_group
+dependencies[] = field_multiple_limit
+dependencies[] = field_ui
+dependencies[] = globalredirect
 dependencies[] = help
+dependencies[] = htmlmail
+dependencies[] = imce
 dependencies[] = image
+
 dependencies[] = list
+dependencies[] = layouter
+dependencies[] = less
+dependencies[] = l10n_update
+dependencies[] = media
+dependencies[] = module_filter
+
 dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
-dependencies[] = dblog
+
 dependencies[] = shortcut
-dependencies[] = field_ui
+
 dependencies[] = file
-dependencies[] = admin_menu_toolbar
-dependencies[] = admin_views
-dependencies[] = bundle_copy
-dependencies[] = captcha
-dependencies[] = devel
-dependencies[] = email_registration
-dependencies[] = entity_view_mode
+
+
+
+
+
+
 dependencies[] = features
-dependencies[] = field_group
-dependencies[] = htmlmail
-dependencies[] = imce_wysiwyg
-dependencies[] = l10n_update
-dependencies[] = media
-dependencies[] = module_filter
+
+
+
+
 dependencies[] = clone
 dependencies[] = panelizer
+dependencies[] = semantic_panels
 dependencies[] = panels
 dependencies[] = panels_ipe
-dependencies[] = globalredirect
+
 dependencies[] = simplemeta
 dependencies[] = taxonomy_menu
 dependencies[] = transliteration
 dependencies[] = views_ui
 dependencies[] = views_content
-dependencies[] = wysiwyg_template
-dependencies[] = bean
-dependencies[] = bean_admin_ui
+
 dependencies[] = webform
-dependencies[] = entityreference
+
 dependencies[] = link
 dependencies[] = jquery_update
-dependencies[] = date
-dependencies[] = date_popup
-dependencies[] = date_views
-dependencies[] = less
+
 dependencies[] = pathauto
-dependencies[] = ckeditor
-dependencies[] = ckeditor_link
-dependencies[] = ctools_custom_content
-dependencies[] = field_multiple_limit
+
 dependencies[] = nodequeue
 dependencies[] = variable
+dependencies[] = variable_admin
+
 dependencies[] = sasta_base
-dependencies[] = fe_nodequeue
-dependencies[] = facetapi
-dependencies[] = search_api
-dependencies[] = search_api_db
+
+dependencies[] = token_filter
 dependencies[] = panels_everywhere
 dependencies[] = slick
 dependencies[] = slick_ui
 dependencies[] = slick_views
 dependencies[] = slick_fields
+dependencies[] = xmlsitemap
+
+dependencies[] = search_api_views
+dependencies[] = search_api_facetapi
+dependencies[] = rules
+dependencies[] = rules_admin
+
+dependencies[] = path_breadcrumbs_ui
+dependencies[] = path_breadcrumbs
+dependencies[] = path_metatags
+dependencies[] = path_metatags_ui
 
 
+
+dependencies[] = multiupload_imagefield_widget
+dependencies[] = multiupload_filefield_widget
+dependencies[] = entity_token
+
+dependencies[] = entitycache
+dependencies[] = chosen
+dependencies[] = better_exposed_filters
+dependencies[] = field_collection
