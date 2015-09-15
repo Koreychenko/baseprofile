@@ -7,7 +7,6 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
 dependencies[] = block
 dependencies[] = bundle_copy
-dependencies[] = callbackform
 dependencies[] = captcha
 dependencies[] = ckeditor
 dependencies[] = ckeditor_link
@@ -29,7 +28,6 @@ dependencies[] = email_registration
 dependencies[] = entityreference
 dependencies[] = entity_view_mode
 dependencies[] = facetapi
-dependencies[] = fe_nodequeue
 dependencies[] = field_group
 dependencies[] = field_multiple_limit
 dependencies[] = field_ui
@@ -40,7 +38,6 @@ dependencies[] = imce
 dependencies[] = image
 
 dependencies[] = list
-dependencies[] = layouter
 dependencies[] = less
 dependencies[] = l10n_update
 dependencies[] = media
@@ -51,10 +48,12 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = taxonomy
+dependencies[] = field
 
 dependencies[] = shortcut
 
-dependencies[] = file
+dependencies[] = fieldable_panels_panes
+dependencies[] = callback
 
 
 
@@ -85,7 +84,6 @@ dependencies[] = jquery_update
 
 dependencies[] = pathauto
 
-dependencies[] = nodequeue
 dependencies[] = variable
 dependencies[] = variable_admin
 
