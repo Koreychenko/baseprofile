@@ -67,7 +67,6 @@ dependencies[] = features
 
 dependencies[] = clone
 dependencies[] = panelizer
-dependencies[] = semantic_panels
 dependencies[] = panels
 dependencies[] = panels_ipe
 
