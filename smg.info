@@ -5,7 +5,6 @@ core = 7.x
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
 dependencies[] = block
-dependencies[] = bundle_copy
 dependencies[] = captcha
 dependencies[] = ckeditor
 dependencies[] = ckeditor_link
