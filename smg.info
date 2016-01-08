@@ -12,13 +12,10 @@ dependencies[] = ckeditor
 dependencies[] = ckeditor_link
 dependencies[] = colorbox
 dependencies[] = comment
-dependencies[] = conditional_fields
 dependencies[] = contextual
 dependencies[] = ctools_custom_content
 dependencies[] = dblog
 dependencies[] = sasta_panelst
-dependencies[] = search_api
-dependencies[] = search_api_db
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = date_views
@@ -26,8 +23,7 @@ dependencies[] = devel
 dependencies[] = devel_generate
 dependencies[] = email_registration
 dependencies[] = entityreference
-dependencies[] = entity_view_mode
-dependencies[] = facetapi
+dependencies[] = file_entity
 dependencies[] = field_group
 dependencies[] = field_multiple_limit
 dependencies[] = field_ui
@@ -40,10 +36,10 @@ dependencies[] = image
 dependencies[] = list
 dependencies[] = less
 dependencies[] = l10n_update
-dependencies[] = media
 dependencies[] = module_filter
 
 dependencies[] = menu
+dependencies[] = menu_attributes
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
@@ -53,17 +49,8 @@ dependencies[] = field
 dependencies[] = shortcut
 
 dependencies[] = fieldable_panels_panes
-dependencies[] = callback
-
-
-
-
-
 
 dependencies[] = features
-
-
-
 
 dependencies[] = clone
 dependencies[] = panelizer
@@ -76,11 +63,7 @@ dependencies[] = transliteration
 dependencies[] = views_ui
 dependencies[] = views_content
 
-dependencies[] = webform
-
-dependencies[] = link
 dependencies[] = jquery_update
-
 dependencies[] = pathauto
 
 dependencies[] = variable
@@ -96,8 +79,6 @@ dependencies[] = slick_views
 dependencies[] = slick_fields
 dependencies[] = xmlsitemap
 
-dependencies[] = search_api_views
-dependencies[] = search_api_facetapi
 dependencies[] = rules
 dependencies[] = rules_admin
 
@@ -106,13 +87,10 @@ dependencies[] = path_breadcrumbs
 dependencies[] = path_metatags
 dependencies[] = path_metatags_ui
 
-
-
 dependencies[] = multiupload_imagefield_widget
 dependencies[] = multiupload_filefield_widget
 dependencies[] = entity_token
 
-dependencies[] = entitycache
 dependencies[] = chosen
 dependencies[] = better_exposed_filters
 dependencies[] = field_collection

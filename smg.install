@@ -39,10 +39,6 @@ function smg_install() {
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
 
-  // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'sasta_bs');
-  $admin_theme = 'seven';
-
   // Enable user picture support and set the default to a square thumbnail option.
   variable_set('user_pictures', '1');
   variable_set('user_picture_dimensions', '1024x1024');
@@ -52,10 +48,6 @@ function smg_install() {
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
-  // Create an image field named "Image", enabled for the 'article' content type.
-  // Many of the following values will be defaulted, they're included here as an illustrative examples.
-  // See http://api.drupal.org/api/function/field_create_field/7
-
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))
@@ -63,5 +55,6 @@ function smg_install() {
     ->condition('name', 'seven')
     ->execute();
   variable_set('admin_theme', 'seven');
+  variable_set('default_theme', 'puzzle');
   variable_set('node_admin_theme', '1');
 }
