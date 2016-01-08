@@ -2,7 +2,6 @@ name = Smg Install Profile
 description = Install with commonly used features pre-configured.
 core = 7.x
 
-
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
 dependencies[] = block
@@ -94,3 +93,11 @@ dependencies[] = entity_token
 dependencies[] = chosen
 dependencies[] = better_exposed_filters
 dependencies[] = field_collection
+dependencies[] = accordion
+dependencies[] = carousel
+dependencies[] = elements_tabs
+dependencies[] = fullwidth_image
+dependencies[] = gallery
+dependencies[] = paragraph
+dependencies[] = slider
+
