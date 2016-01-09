@@ -67,7 +67,8 @@ dependencies[] = pathauto
 dependencies[] = variable
 dependencies[] = variable_admin
 
-;dependencies[] = sasta_base
+dependencies[] = base_settings
+dependencies[] = base_content_types
 
 dependencies[] = token_filter
 dependencies[] = panels_everywhere
