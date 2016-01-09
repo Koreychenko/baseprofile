@@ -81,6 +81,7 @@ dependencies[] = xmlsitemap_node
 dependencies[] = xmlsitemap_engines
 dependencies[] = filefield_sources
 dependencies[] = title
+dependencies[] = sasta_sitepane
 
 dependencies[] = strongarm
 
