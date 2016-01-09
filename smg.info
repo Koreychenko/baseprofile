@@ -67,7 +67,7 @@ dependencies[] = pathauto
 dependencies[] = variable
 dependencies[] = variable_admin
 
-dependencies[] = sasta_base
+;dependencies[] = sasta_base
 
 dependencies[] = token_filter
 dependencies[] = panels_everywhere
@@ -76,6 +76,8 @@ dependencies[] = slick_ui
 dependencies[] = slick_views
 dependencies[] = slick_fields
 dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_node
+dependencies[] = xmlsitemap_engines
 
 dependencies[] = rules
 dependencies[] = rules_admin
