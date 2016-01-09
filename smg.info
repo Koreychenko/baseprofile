@@ -79,6 +79,7 @@ dependencies[] = slick_fields
 dependencies[] = xmlsitemap
 dependencies[] = xmlsitemap_node
 dependencies[] = xmlsitemap_engines
+dependencies[] = filefield_sources
 
 dependencies[] = strongarm
 
