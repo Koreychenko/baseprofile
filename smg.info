@@ -79,6 +79,8 @@ dependencies[] = xmlsitemap
 dependencies[] = xmlsitemap_node
 dependencies[] = xmlsitemap_engines
 
+dependencies[] = strongarm
+
 dependencies[] = rules
 dependencies[] = rules_admin
 
