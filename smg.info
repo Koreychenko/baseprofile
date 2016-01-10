@@ -107,4 +107,5 @@ dependencies[] = fullwidth_image
 dependencies[] = gallery
 dependencies[] = paragraph
 dependencies[] = slider
+dependencies[] = base_layouts
 
