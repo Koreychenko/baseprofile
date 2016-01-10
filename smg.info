@@ -3,6 +3,7 @@ description = Install with commonly used features pre-configured.
 core = 7.x
 
 dependencies[] = admin_menu_toolbar
+dependencies[] = puzzle
 dependencies[] = admin_views
 dependencies[] = block
 dependencies[] = captcha
