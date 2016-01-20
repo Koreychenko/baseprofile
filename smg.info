@@ -32,6 +32,7 @@ dependencies[] = imce
 dependencies[] = image
 
 dependencies[] = list
+dependencies[] = link
 dependencies[] = less
 dependencies[] = l10n_update
 dependencies[] = module_filter
